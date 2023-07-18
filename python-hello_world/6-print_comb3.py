@@ -1,6 +1,8 @@
 #!/urs/bin/python3
 for i in range(9):
     for e in range(10):
+        if i == 0 and e == 0:
+            continue
         if i == 1:
             e += 2
             if e > 9:
