@@ -38,6 +38,8 @@ def nums(pword):
             return True
             break
 
+# validator funtion
+
 
 def pass_validator(pword):
     if len(password) > 8:
