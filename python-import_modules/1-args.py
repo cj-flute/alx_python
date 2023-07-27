@@ -6,7 +6,7 @@ def out_arguments(argv):
     number_of_arguments = len(argv) - 1
     plural = "s" if number_of_arguments != 1 else ""
 
-    print(f"{number_of_arguments}: argument{plural}", end="")
+    print(f"{number_of_arguments} argument{plural}", end="")
     if number_of_arguments > 0:
         print()
         for i, arg in enumerate(argv[1:], start=1):
