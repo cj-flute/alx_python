@@ -9,14 +9,14 @@ def main():
     b = 2
     try:
         result = safe_print_division(a, b)
-        print("{:d} / {:d} = {}".format(a, b, result))
+        print("Inside result: {}".format(result))
         pass
     except ZeroDivisionError:
         result = "None"
-        print("{:d} / {:d} = None".format(a, b))
+        print("Inside result: {}".format(result))
         pass
     finally:
-        print("Inside result: {}".format(result))
+        print("{:d} / {:d} = {}".format(a, b, result))
         pass
 
     pass
