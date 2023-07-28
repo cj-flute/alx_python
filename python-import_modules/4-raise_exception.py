@@ -5,6 +5,14 @@ def raise_exception():
         value += 10
     except TypeError:
         print("Exception has been raised")
+    pass
 
 
-raise_exception()
+def main():
+    raise_exception()
+    pass
+
+
+if __name__ == "__main__":
+    main()
+    pass
