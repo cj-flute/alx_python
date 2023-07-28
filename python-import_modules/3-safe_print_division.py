@@ -5,8 +5,8 @@ def safe_print_division(a, b):
 
 
 def main():
-    a = 12
-    b = 2
+    a = int(input())
+    b = int(input())
     try:
         result = safe_print_division(a, b)
         print("Inside result: {}".format(result))
