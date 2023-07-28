@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-import safe_print_division
+def safe_print_division(a, b):
+    return a/b
+    pass
+
 
 a = 12
 b = 2
 try:
-    result = safe_print_division.safe_print_division(a, b)
+    result = safe_print_division(a, b)
     print("{:d} / {:d} = {}".format(a, b, result))
     pass
 except ZeroDivisionError:
@@ -18,7 +21,7 @@ finally:
 a = 12
 b = 0
 try:
-    result = safe_print_division.safe_print_division(a, b)
+    result = safe_print_division(a, b)
     print("{:d} / {:d} = {}".format(a, b, result))
     pass
 except ZeroDivisionError:
