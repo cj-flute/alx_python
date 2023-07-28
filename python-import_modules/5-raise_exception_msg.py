@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 def raise_exception_msg():
-    value = "Hello"
     try:
-        print(val)
+        print(value)
     except NameError:
-        print("C is fun")
+        value = input()
+        print(value)
     pass
 
 
