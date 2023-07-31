@@ -8,8 +8,14 @@ def no_c(my_string):
     pass
 
 
-try:
-    a_string = str(input())
-    print(no_c(a_string))
-except TypeError:
-    print("Not a string")
+def main():
+    try:
+        a_string = str(input())
+        print(no_c(a_string))
+    except TypeError:
+        print("Not a string")
+    pass
+
+
+if __name__ == "__main__":
+    main()
