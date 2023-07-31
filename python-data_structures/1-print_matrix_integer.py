@@ -9,11 +9,7 @@ matrix = [
 def print_matrix_integer(matrix=[[]]):
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
-            matrix[i][0], matrix[i][1], matrix[i][2] = matrix[i]
-            if j < 2:
-                print("{:d}".format(matrix[i][j]), end=" ")
-            elif j == 2:
-                print("{:d}".format(matrix[i][j]), end="")
+            print("{:d}".format(matrix[i][j]), end=" ")
         print(end="\n")
     pass
 
