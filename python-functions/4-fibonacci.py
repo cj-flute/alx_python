@@ -8,7 +8,7 @@ def fina(x):
         return fina(x - 1) + fina(x - 2)
 
 
-def fx(t):
+def fibonacci_sequence(t):
     lis = []
     for i in range(t):
         lis.append(fina(i))
@@ -17,7 +17,7 @@ def fx(t):
 
 def main():
     num = int(input())
-    print(fx(num))
+    print(fibonacci_sequence(num))
     pass
 
 
