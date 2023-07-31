@@ -15,4 +15,11 @@ def fx(t):
     return lis
 
 
-# print(fx(10))
+def main():
+    num = int(input())
+    print(fx(num))
+    pass
+
+
+if __name__ == "__main__":
+    main()
