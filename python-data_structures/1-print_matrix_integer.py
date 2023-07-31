@@ -14,13 +14,13 @@ def print_matrix_integer(matrix=[[]]):
                 print("{:d}".format(matrix[i][j]), end=" ")
             elif j == 2:
                 print("{:d}".format(matrix[i][j]), end="")
-        print(end="$\n")
+        print(end="\n")
     pass
 
 
 def main():
     print_matrix_integer(matrix)
-    print("--", end="$\n")
+    print("--", end="\n")
     print_matrix_integer()
     pass
 
