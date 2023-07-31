@@ -4,7 +4,8 @@ def is_prime(num):
         return True
     if num < 0:
         return False
-    if (num % 2 != 0 and num % 3 != 0 and num % 5 != 0) or (num == 0):
+    if (num % 2 != 0 and num % 3 != 0
+            and num % 5 != 0 and num % 7 != 0) or (num == 0):
         return True
     else:
         return False
