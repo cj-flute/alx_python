@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-password = input("Input password: ")
+password = input()
 
 # check for Uppercase in password
 
@@ -53,4 +53,10 @@ def pass_validator(pword):
         return False
 
 
-print(pass_validator(password))
+def main():
+    print(pass_validator(password))
+    pass
+
+
+if __name__ == "__main__":
+    main()
