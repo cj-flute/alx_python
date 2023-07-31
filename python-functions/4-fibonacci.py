@@ -15,4 +15,4 @@ def fx(t):
     return lis
 
 
-print(fx(10))
+# print(fx(10))
