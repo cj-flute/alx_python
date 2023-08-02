@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 class Square:
-    def __init__(self, size):
+    def __init__(self, size=3):
         self.__size = size
 
 
-my_sqaure = Square(3)
+my_sqaure = Square()
 print(type(my_sqaure))
 print(my_sqaure.__dict__)
 
