@@ -8,12 +8,12 @@ my_sqaure = Square(3)
 print(type(my_sqaure))
 print(my_sqaure.__dict__)
 
-try:
-    print(my_sqaure.size)
-except Exception as e:
-    print(e)
+# try:
+#     print(my_sqaure.size)
+# except Exception as e:
+#     print(e)
 
-try:
-    print(my_sqaure.__size)
-except Exception as e:
-    print(e)
+# try:
+#     print(my_sqaure.__size)
+# except Exception as e:
+#     print(e)
