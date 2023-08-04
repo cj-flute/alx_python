@@ -23,7 +23,7 @@ class Square:
     @property
     def size(self):
         '''
-            python3 -c 'print(__import__("3-square").__init__.__doc__)
+            python3 -c 'print(__import__("3-square").size.__doc__)
             python3 -c 'print(__import__("3-square").Square.size.__doc__)
             getter
         '''
@@ -32,7 +32,7 @@ class Square:
     @size.setter
     def size(self, value):
         '''
-            python3 -c 'print(__import__("3-square").__init__.__doc__)
+            python3 -c 'print(__import__("3-square").size.__doc__)
             python3 -c 'print(__import__("3-square").Square.size.__doc__)
             setter
         '''
@@ -43,7 +43,7 @@ class Square:
 
     def area(self):
         '''
-            python3 -c 'print(__import__("3-square").__init__.__doc__)
+            python3 -c 'print(__import__("3-square").area.__doc__)
             python3 -c 'print(__import__("3-square").Square.area.__doc__)
         '''
         area = self.__size ** 2
