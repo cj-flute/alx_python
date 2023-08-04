@@ -1,4 +1,12 @@
 #!/usr/bin/python3
+'''
+    Exact same pbject
+    Class A()
+    A function is_same_class(obj, a_class) that check if the object is an instance of 
+     a class
+'''
+
+
 class A:
     '''
         A class A()
