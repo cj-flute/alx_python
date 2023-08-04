@@ -1,6 +1,13 @@
 #!/usr/bin/python3
 class A:
+    '''
+        A class A()
+    '''
+
     def __init__(self):
+        '''
+            A.__init__()
+        '''
         pass
 
 
