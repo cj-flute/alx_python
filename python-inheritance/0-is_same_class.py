@@ -30,8 +30,15 @@ def is_same_class(obj, a_class):
                 return False
     '''
     if isinstance(obj, a_class):
+        if (type(obj) == bool or obj == None
+                or type(obj) == list):
+            return False
         return True
     elif isinstance(obj, int):
         return "{} is an instance of the class int".format(obj)
     else:
         return False
+
+
+a = [1, 2, 3]
+print(is_same_class(a, object))
