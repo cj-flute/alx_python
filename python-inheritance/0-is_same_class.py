@@ -38,7 +38,3 @@ def is_same_class(obj, a_class):
         return "{} is an instance of the class int".format(obj)
     else:
         return False
-
-
-a = [1, 2, 3]
-print(is_same_class(a, object))
