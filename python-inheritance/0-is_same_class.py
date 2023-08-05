@@ -39,7 +39,3 @@ def is_same_class(obj, a_class):
         return True
     else:
         return False
-
-
-a = [1, 2, 3]
-print(is_same_class(a, list))
