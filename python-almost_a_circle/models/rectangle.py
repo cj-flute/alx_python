@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 '''
     models module
-    Holds class Base
+    Holds class Base and Rectangle
+    Rectangle class inherits from base class
 '''
 
 
@@ -62,7 +63,7 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def width(self, height):
+    def height(self, height):
         self.__height = height
 
     @property
