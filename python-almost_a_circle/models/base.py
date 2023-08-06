@@ -22,7 +22,7 @@ class Base:
             Base.__init__()
             instance id
         '''
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
