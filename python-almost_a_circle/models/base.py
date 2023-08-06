@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+'''
+    models module
+    Holds class Base
+'''
+
+
 class Base:
     '''models/base
         Base class with private class attribute __nb_object = 0
