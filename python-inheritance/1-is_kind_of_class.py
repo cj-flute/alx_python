@@ -51,5 +51,11 @@ def is_kind_of_class(obj, a_class):
     '''
     if issubclass(obj, a_class):
         return True
+    elif issubclass(obj, int):
+        return True
     else:
         return False
+
+
+a = 1
+print(is_kind_of_class(a, int))
