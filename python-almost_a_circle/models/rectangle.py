@@ -136,6 +136,10 @@ class Rectangle(Base):
         else:
             raise ValueError("id must be an integer")
 
+    def area(self):
+        '''The area method '''
+        return self.__width * self.__height
+
 
 # try:
 #     Rectangle(10, "2")
