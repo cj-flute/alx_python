@@ -146,6 +146,11 @@ class Rectangle(Base):
         for i in range(self.__height):
             print(char * self.__width)
 
+    def __str__(self):
+        '''The magic __str__ method'''
+        return "[{0}] ({1}) {2}/{3} - {4}/{5}".format(__class__.__name__, self._id,
+                                                      self.__x, self.__y, self.__width, self.__height)
+
 
 # try:
 #     Rectangle(10, "2")
