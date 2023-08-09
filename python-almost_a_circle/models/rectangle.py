@@ -144,7 +144,7 @@ class Rectangle(Base):
         '''The display method '''
         char = "#"
         for i in range(self.__x):
-            print(end="")
+            print()
         for i in range(self.__height):
             if self.__y == 0 and self.__x > 0:
                 self.__y = 1
