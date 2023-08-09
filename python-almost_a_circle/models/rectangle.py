@@ -143,7 +143,10 @@ class Rectangle(Base):
     def display(self):
         '''The display method '''
         char = "#"
+        for i in range(self.__x):
+            print(end="")
         for i in range(self.__height):
+            print(" " * self.__y, end="")
             print(char * self.__width)
 
     def __str__(self):
