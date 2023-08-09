@@ -163,6 +163,9 @@ class Rectangle(Base):
                                                       self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args):
+        '''Update method that args and update the value 
+        of the instances of the class starting from id
+        '''
         if len(args) == 1:
             self._id = args
         elif len(args) == 2:
