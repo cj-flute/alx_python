@@ -146,7 +146,7 @@ class Rectangle(Base):
         for i in range(self.__x):
             print(end="")
         for i in range(self.__height):
-            if self.__y == 0:
+            if self.__y == 0 and self.__x > 0:
                 self.__y = 1
             print(" " * self.__y, end="")
             print(char * self.__width)
