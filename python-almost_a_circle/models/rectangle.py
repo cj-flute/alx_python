@@ -163,35 +163,6 @@ class Rectangle(Base):
                                                       self.__x, self.__y, self.__width, self.__height)
 
 
-r1 = Rectangle(2, 3, 2, 2)
-r1.display()
-
-print("---")
-
-r2 = Rectangle(3, 2, 1, 0)
-r2.display()
-
-print("---")
-
-r3 = Rectangle(4, 5, 1, 0)
-r3.display()
-
-print("---")
-
-r4 = Rectangle(3, 4, 0, 1)
-r4.display()
-
-print("---")
-
-r5 = Rectangle(10, 12, 1, 0)
-r5.display()
-
-print("---")
-
-r6 = Rectangle(5, 4, 4, 3)
-r6.display()
-
-
 # try:
 #     Rectangle(10, "2")
 #     Rectangle.height
