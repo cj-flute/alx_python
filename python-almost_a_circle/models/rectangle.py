@@ -162,26 +162,14 @@ class Rectangle(Base):
         return "[{0}] ({1}) {2}/{3} - {4}/{5}".format(__class__.__name__, self._id,
                                                       self.__x, self.__y, self.__width, self.__height)
 
-
-# try:
-#     Rectangle(10, "2")
-#     Rectangle.height
-# except Exception as e:
-#     print("[{}] {}".format(e.__class__.__name__, e))
-
-# try:
-#     r = Rectangle(10, 2)
-#     r.width = -10
-# except Exception as e:
-#     print("[{}] {}".format(e.__class__.__name__, e))
-
-# try:
-#     r = Rectangle(10, 2)
-#     r.x = {}
-# except Exception as e:
-#     print("[{}] {}".format(e.__class__.__name__, e))
-
-# try:
-#     Rectangle(10, 2, 3, -1)
-# except Exception as e:
-#     print("[{}] {}".format(e.__class__.__name__, e))
+    def update(self, *args):
+        if len(args) == 1:
+            self._id = args
+        elif len(args) == 2:
+            self._id, self.__width = args
+        elif len(args) == 3:
+            self._id, self.__width, self.__height = args
+        elif len(args) == 4:
+            self._id, self.__width, self.__height, self.__x = args
+        elif len(args) == 5:
+            self._id, self.__width, self.__height, self.__x, self.__y = args
