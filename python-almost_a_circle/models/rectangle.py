@@ -162,7 +162,7 @@ class Rectangle(Base):
         return "[{0}] ({1}) {2}/{3} - {4}/{5}".format(__class__.__name__, self._id,
                                                       self.__x, self.__y, self.__width, self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''Update method that args and update the value 
         of the instances of the class starting from id
         '''
@@ -176,3 +176,9 @@ class Rectangle(Base):
             self._id, self.__width, self.__height, self.__x = args
         elif len(args) == 5:
             self._id, self.__width, self.__height, self.__x, self.__y = args
+        elif kwargs:
+            self._id = kwargs.get('id', self._id)
+            self.__width = kwargs.get('width', self.__width)
+            self.__height = kwargs.get('height', self.__height)
+            self.__x = kwargs.get('x', self.__x)
+            self.__y = kwargs.get('y', self.__y)
