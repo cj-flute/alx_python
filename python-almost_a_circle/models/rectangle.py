@@ -80,8 +80,8 @@ class Rectangle(Base):
     @width.setter
     def width(self, width):
         if isinstance(width, int) and width > 0:
-            self.__ = width
-        elif width <= 0:
+            self.__width = width
+        elif int(width) <= 0:
             raise ValueError("width must be > 0")
         else:
             raise TypeError("Width must be an integer")
@@ -93,8 +93,8 @@ class Rectangle(Base):
     @height.setter
     def height(self, height):
         if isinstance(height, int) and height > 0:
-            self.__ = height
-        elif height <= 0:
+            self.__height = height
+        elif int(height) <= 0:
             raise ValueError("height must be > 0")
         else:
             raise TypeError("height must be an integer")
