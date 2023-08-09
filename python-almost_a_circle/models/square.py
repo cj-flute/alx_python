@@ -82,8 +82,8 @@ class Rectangle(Base):
     @width.setter
     def width(self, width):
         if isinstance(width, int) and width > 0:
-            self.__ = width
-        elif width <= 0:
+            self.__width = width
+        elif int(width) <= 0:
             raise ValueError("width must be > 0")
         else:
             raise TypeError("Width must be an integer")
@@ -95,8 +95,8 @@ class Rectangle(Base):
     @height.setter
     def height(self, height):
         if isinstance(height, int) and height > 0:
-            self.__ = height
-        elif height <= 0:
+            self.__height = height
+        elif int(height) <= 0:
             raise ValueError("height must be > 0")
         else:
             raise TypeError("height must be an integer")
@@ -207,3 +207,17 @@ class Square(Rectangle):
         '''The magic __str__ method for the square class'''
         return "[{0}] ({1}) {2}/{3} - {4}".format(__class__.__name__, self._id,
                                                   self.x, self.y, self.__width)
+
+    @property
+    def size(self):
+        return self.__width
+
+    @size.setter
+    def size(self, new_size):
+        self.__height = new_size
+        if isinstance(new_size, int) and new_size > 0:
+            self.__width = new_size
+        elif int(new_size) <= 0:
+            raise ValueError("width must be > 0")
+        else:
+            raise TypeError("Width must be an integer")
