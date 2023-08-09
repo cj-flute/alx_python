@@ -140,6 +140,12 @@ class Rectangle(Base):
         '''The area method '''
         return self.__width * self.__height
 
+    def display(self):
+        '''The display method '''
+        char = "#"
+        for i in range(self.__height):
+            print(char * self.__width)
+
 
 # try:
 #     Rectangle(10, "2")
