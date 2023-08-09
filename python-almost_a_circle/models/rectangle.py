@@ -147,7 +147,10 @@ class Rectangle(Base):
             print(end="")
         for i in range(self.__height):
             if self.__y == 0 and self.__x > 0:
-                self.__y = 1
+                if self.__y == 0:
+                    self.__y = 1
+                if self.__x == 0:
+                    self.__y = 0
             print(" " * self.__y, end="")
             print(char * self.__width)
 
