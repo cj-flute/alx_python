@@ -12,8 +12,8 @@ def main():
     '''
     r = requests.get('https://alu-intranet.hbtn.io/status')
     print("Body response:")
-    print("     - type: {}".format(type(str(r._content))))
-    print("     - content: {}".format(r.content.decode()))
+    print("         - type: {}".format(type(str(r._content))))
+    print("         - content: {}".format(r.content.decode()))
 
 
 if __name__ == "__main__":
