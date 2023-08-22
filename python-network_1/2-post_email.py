@@ -11,7 +11,7 @@ def main():
         python3 -c 'print(__import__("requests").main().__doc__)'
         main function
     '''
-    r = input()
+    r = "https://intranet.hbtn.io"
     the_url = requests.get(r)
     if 'X-Request-ID' in the_url.headers:
         x_request_id = the_url.headers['X-Request-ID']
