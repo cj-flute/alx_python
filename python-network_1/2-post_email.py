@@ -11,11 +11,19 @@ def main():
         python3 -c 'print(__import__("requests").main().__doc__)'
         main function
     '''
-    r = "https://intranet.hbtn.io"
-    the_url = requests.get(r)
-    if 'X-Request-ID' in the_url.headers:
-        x_request_id = the_url.headers['X-Request-ID']
-        print(x_request_id)
+    if len(sys.argv) < 3:
+        print("Usage: python script.py <URL> <email>")
+        sys.exit(1)
+
+    r = sys.argv[1]
+    email = sys.argv[2]
+    payload = {'email': email}
+    the_url = requests.post(r, data=payload)
+
+    if r.status_code == 200:
+        print(r.text)
+    else:
+        print("Error: Status code {}".format(r.status_code))
 
 
 if __name__ == "__main__":
