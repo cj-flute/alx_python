@@ -11,19 +11,17 @@ def main():
         python3 -c 'print(__import__("requests").main().__doc__)'
         main function
     '''
-    if len(sys.argv) < 3:
-        print("Usage: python script.py <URL> <email>")
+    if len(sys.argv) < 2:
+        print("Usage: python script.py <URL>")
         sys.exit(1)
 
-    r = sys.argv[1]
-    email = sys.argv[2]
-    payload = {'email': email}
-    the_url = requests.post(r, data=payload)
+    request = sys.argv[1]
+    response = requests.post(request)
 
-    if r.status_code == 200:
-        print(r.text)
-    else:
+    if request.status_code >= 400:
         print("Error: {}".format(r.status_code))
+    else:
+        print(request.body)
 
 
 if __name__ == "__main__":
