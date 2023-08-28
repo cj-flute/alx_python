@@ -51,6 +51,10 @@ class Rectangle(BaseGeometry):
 
 
 class Square(Rectangle):
+    '''
+        Square class that inherits from Rectangle class
+    '''
+
     def __init__(self, size):
         self.__size = size
         s = self.__size
