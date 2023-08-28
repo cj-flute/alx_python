@@ -15,7 +15,7 @@ def main():
     response = requests.get(url)
     body = response.text
 
-    if request.status_code >= 400:
+    if requests.status_code >= 400:
         print("Error: {}".format(requests.get.status_code))
     else:
         print(body)
