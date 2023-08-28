@@ -18,12 +18,12 @@ def main():
     url = sys.argv[1]
     email = sys.argv[2]
     payload = {'email': email}
-    the_url = requests.post(url, data=payload)
+    response = requests.post(url, data=payload)
 
-    if the_url(url).status_code == 200:
-        print(the_url.text)
+    if response.status_code == 200:
+        print(response.text)
     else:
-        print("Error: {}".format(the_url.status_code))
+        print("Error: {}".format(response.status_code))
 
 
 if __name__ == "__main__":
