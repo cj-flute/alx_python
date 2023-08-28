@@ -48,6 +48,3 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         return "[{0}] {1}/{2}".format(__class__.__name__, self.__width,
                                       self.__height)
-
-
-print(Rectangle(5, 5))
