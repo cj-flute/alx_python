@@ -32,12 +32,12 @@ class Rectangle(BaseGeometry):
         w = self.__width
         h = self.__height
 
-        if w <= 0:
-            raise ValueError("width must be greater than 0")
-        elif type(w) != int:
+        if type(w) != int:
             raise TypeError("width must be an integer")
+        elif w <= 0:
+            raise ValueError("width must be greater than 0")
 
-        if h <= 0:
-            raise ValueError("heigth must be greater than 0")
-        elif type(h) != int:
+        if type(h) != int:
             raise TypeError("heigth must be an integer")
+        elif h <= 0:
+            raise ValueError("heigth must be greater than 0")
