@@ -11,22 +11,23 @@ def main():
         python3 -c 'print(__import__("requests").main().__doc__)'
         main function
     '''
-    if len(sys.argv) < 3:
-        print("Usage: python script.py <URL> <letter>")
-        sys.exit(1)
 
-    url = sys.argv[1]
-    q = sys.argv[2]
-    if sys.argv[2] == None:
+    url = "http://0.0.0.0:5000/search_user"
+    if len(sys.argv) > 1:
+        q = sys.argv[1]
+    else:
         q = ""
-    payload = {'letter': q}
+    payload = {'q': q}
     response = requests.post(url, data=payload)
 
-    if type(response.text) == dict:
-        print(response.text)
-    elif response.text == {}:
-        print("No result")
-    else:
+    try:
+        if not response.json():
+            print("No result")
+        else:
+            id = response.json.get("id")
+            name = response.json.get("name")
+            print("[{}] {}".format(id, name))
+    except ValueError:
         print("Not a valid JSON")
 
 
