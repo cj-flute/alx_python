@@ -15,15 +15,15 @@ def main():
         print("Usage: python script.py <URL> <email>")
         sys.exit(1)
 
-    r = sys.argv[1]
+    url = sys.argv[1]
     email = sys.argv[2]
     payload = {'email': email}
-    the_url = requests.post(r, data=payload)
+    the_url = requests.post(url, data=payload)
 
-    if r.status_code == 200:
+    if requests.get(url).status_code == 200:
         print(r.text)
     else:
-        print("Error: {}".format(r.status_code))
+        print("Error: {}".format(requests.get(url).status_code))
 
 
 if __name__ == "__main__":
