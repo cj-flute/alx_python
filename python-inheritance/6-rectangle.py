@@ -38,6 +38,6 @@ class Rectangle(BaseGeometry):
             raise ValueError("width must be greater than 0")
 
         if type(h) != int:
-            raise TypeError("heigth must be an integer")
+            raise TypeError("height must be an integer")
         elif h <= 0:
-            raise ValueError("heigth must be greater than 0")
+            raise ValueError("height must be greater than 0")
