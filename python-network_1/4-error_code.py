@@ -16,10 +16,10 @@ def main():
         sys.exit(1)
 
     request = sys.argv[1]
-    response = requests.post(request)
+    response = requests.get(request)
 
     if request.status_code >= 400:
-        print("Error: {}".format(r.status_code))
+        print("Error: {}".format(request.status_code))
     else:
         print(request.body)
 
