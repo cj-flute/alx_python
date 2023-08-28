@@ -20,10 +20,10 @@ def main():
     payload = {'email': email}
     the_url = requests.post(url, data=payload)
 
-    if requests.get(url).status_code == 200:
-        print(r.text)
+    if the_url(url).status_code == 200:
+        print(the_url.text)
     else:
-        print("Error: {}".format(requests.get(url).status_code))
+        print("Error: {}".format(the_url.status_code))
 
 
 if __name__ == "__main__":
