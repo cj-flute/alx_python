@@ -19,7 +19,7 @@ def main():
     response = requests.get(request)
 
     if request.status_code >= 400:
-        print("Error: {}".format(request.status_code))
+        print("Error: {}".format(request.status_code.decode()))
     else:
         print(request.body)
 
