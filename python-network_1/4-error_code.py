@@ -15,13 +15,14 @@ def main():
         print("Usage: python script.py <URL>")
         sys.exit(1)
 
-    request = sys.argv[1]
-    response = requests.get(request)
+    url = sys.argv[1]
+    response = requests.get(url)
+    body = response.text
 
     if request.status_code >= 400:
-        print("Error: {}".format(request.status_code.decode()))
+        print("Error: {}".format(request.get.status_code))
     else:
-        print(request.body)
+        print(body)
 
 
 if __name__ == "__main__":
