@@ -17,8 +17,8 @@ def main():
         q = sys.argv[1]
     else:
         q = ""
-    payload = {'q': q}
-    response = requests.post(url, data=payload)
+    payload = {'letter': q}
+    response = requests.post(url, param=payload)
 
     try:
         if not response.json():
