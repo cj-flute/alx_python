@@ -16,7 +16,7 @@ def main():
     """
     username = sys.argv[1]
     password = sys.argv[2]
-    url = 'https://github.com/user'
+    url = 'https://api.github.com/user'
     response = requests.get(url, auth=HTTPBasicAuth(username, password))
     json_response = response.json()
     print(json_response.get("id"))
