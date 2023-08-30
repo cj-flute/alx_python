@@ -15,7 +15,7 @@ def main():
         use basic authentication
     """
     username = sys.argv[1]
-    password = sys.argv[2]
+    personal_access_token = sys.argv[2]
     url = 'https://api.github.com/user'
     data = (username, personal_access_token)
     response = requests.get(url, auth=data)
