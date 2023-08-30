@@ -14,8 +14,8 @@ def main():
         Takes your username and password
         use basic authentication
     """
-    username = argv.sys[1]
-    password = argv.sys[2]
+    username = sys.argv[1]
+    password = sys.argv[2]
     url = 'https://github.com/user'
     response = requests.get(url, auth=HTTPBasicAuth(username, password))
     json_response = response.json()
