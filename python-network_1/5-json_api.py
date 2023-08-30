@@ -17,15 +17,16 @@ def main():
         q = sys.argv[1]
     else:
         q = ""
-    payload = {'letter': q}
-    response = requests.post(url, param=payload)
+    payload = {'q': q}
+    response = requests.post(url, data=payload)
 
     try:
-        if not response.json():
+        json_res = response.json()
+        if not json_res:
             print("No result")
         else:
-            id = response.json.get("id")
-            name = response.json.get("name")
+            id = json_res.get("id")
+            name = json_res.get("name")
             print("[{}] {}".format(id, name))
     except ValueError:
         print("Not a valid JSON")
