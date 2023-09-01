@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-password = input()
 
 # check for Uppercase in password
 
@@ -26,6 +25,13 @@ def lower(pword):
             return True
             break
 
+# check for space in password
+
+
+def space(pword):
+    if ' ' in pword:
+        return True
+
 
 # check for numbers in the password
 def nums(pword):
@@ -41,22 +47,20 @@ def nums(pword):
 # validator funtion
 
 
-def pass_validator(pword):
-    if len(password) > 8:
-        if (upper(password) and
-                lower(password) and
-                nums(password)):
-            return True
+def validate_password(pword):
+    if len(pword) > 8:
+        if upper(pword):
+            if lower(pword):
+                if nums(pword):
+                    if not space(pword):
+                        return True
+                    else:
+                        return False
+                else:
+                    return False
+            else:
+                return False
         else:
-            False
+            return False
     else:
         return False
-
-
-def main():
-    print(pass_validator(password))
-    pass
-
-
-if __name__ == "__main__":
-    main()
