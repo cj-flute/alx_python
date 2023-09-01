@@ -5,10 +5,10 @@ def is_prime(num):
                 or num == 5 or num == 7 or
                 num == 11):
             return True
-        if num <= 0:
+        if num <= 0 or num == 1:
             return False
         if (num % 2 != 0 and num % 3 != 0
-                and num % 5 != 0 and
+                or num % 5 != 0 and
                 num % 7 != 0 and
                 num % 11 != 0):
             return True
