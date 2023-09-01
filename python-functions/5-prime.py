@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 def is_prime(num):
-    if num == 1 or num == 2 or num == 3:
+    if (num == 1 or num == 2 or num == 3
+            or num == 5 or num == 7 or
+            num == 11):
         return True
     if num <= 0:
         return False
