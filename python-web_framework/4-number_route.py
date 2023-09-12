@@ -42,7 +42,7 @@ def python(text=' is cool'):
 @app.route('/number/<int:n>')
 def number(n):
     if type(n) == int:
-        return 'n is an integer'
+        return f'{n} is an integer'
 
 
 if __name__ == '__main__':
