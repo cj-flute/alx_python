@@ -50,7 +50,7 @@ def number(n):
 def number_template(n):
     if type(n) == int:
         return render_template("5-number.html", n=n)
-    return 1
+    return f'number in h1 tag {n}'
 
 
 if __name__ == '__main__':
