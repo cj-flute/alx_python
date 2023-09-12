@@ -30,8 +30,12 @@ def texts(text):
 
 
 @app.route('/python/<text>')
-def python(text):
+@app.route('/python/')
+@app.route('/pyton')
+def python(text=''):
     new_text = texts(text)
+    if text == '':
+        return 'Python is cool'
     return 'Python' + new_text[1:]
 
 
