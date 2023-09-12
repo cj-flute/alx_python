@@ -48,9 +48,13 @@ def number(n):
 
 @app.route('/number_template/<int:n>', strict_slashes=False)
 def number_template(n):
+    i = 0
+    if n:
+        i = i+1
+        print(i)
+
     if type(n) == int:
         return render_template("5-number.html", n=n)
-    return f'number in h1 tag {n}'
 
 
 if __name__ == '__main__':
