@@ -19,7 +19,14 @@ def hbnb():
 
 @app.route('/c/<text>')
 def text(text):
-    return f'C {text}'
+    word = []
+    text_list = list(text)
+    for texts in range(len(text)):
+        if text_list[texts] == '_':
+            text_list[texts] = ' '
+        word.append(text_list[texts])
+    words = ''.join(word)
+    return f'C {words}'
 
 
 if __name__ == '__main__':
