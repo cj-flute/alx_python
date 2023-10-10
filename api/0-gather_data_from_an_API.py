@@ -4,8 +4,8 @@
 
 """
 
-import sys
 import requests
+import sys
 
 
 def get_employee(id):
@@ -20,14 +20,14 @@ def get_employee(id):
         f'https://jsonplaceholder.typicode.com/users/1/todos')
     todos_data = todos_response.json()
 
-    completed_tasks = [task['title']
-                       for task in todos_data if task['completed']]
-    NUMBER_OF_DONE_TASKS = len(completed_tasks)
+    done_tasks = [task['title']
+                  for task in todos_data if task['completed']]
+    NUMBER_OF_DONE_TASKS = len(done_tasks)
     TOTAL_NUMBER_OF_TASKS = len(todos_data)
 
     print(
         f'Employee {EMPLOYEE_NAME} is done with tasks ({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}):')
-    for task_title in completed_tasks:
+    for task_title in done_tasks:
         print(f'\t{task_title}')
 
 
