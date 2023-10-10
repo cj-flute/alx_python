@@ -22,8 +22,12 @@ def get_employee(id):
 
     done_tasks = [task['title']
                   for task in todos_data if task['completed']]
+    task_not_done = [task['title']
+                     for task in todos_data if not task['completed']]
+
     NUMBER_OF_DONE_TASKS = len(done_tasks)
-    TOTAL_NUMBER_OF_TASKS = len(todos_data)
+    NUMBER_OF_TASKS_NOT_DONE = len(task_not_done)
+    TOTAL_NUMBER_OF_TASKS = NUMBER_OF_DONE_TASKS + NUMBER_OF_TASKS_NOT_DONE
 
     print(
         f'Employee {EMPLOYEE_NAME} is done with tasks ({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}):')
