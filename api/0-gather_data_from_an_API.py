@@ -31,8 +31,8 @@ def get_employee(id):
 
     print(
         f'Employee {EMPLOYEE_NAME} is done with tasks({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}):')
-    for task_title in done_tasks:
-        print(f'\t{task_title}')
+    for TASK_TITLE in done_tasks:
+        print(f'\t{TASK_TITLE}')
 
 
 if __name__ == "__main__":
