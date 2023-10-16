@@ -26,7 +26,5 @@ states = ("California", "Arizona", "Texas", "New york", "Nevada")
 for state in states:
     db_cursor.execute("INSERT INTO states (name) VALUES (%s)", [state])
 
-db_cursor.execute("SELECT * FROM states ORDER BY name ASC")
-
 db_connect.commit()
 db_cursor.close()
