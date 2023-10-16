@@ -21,12 +21,13 @@ db_cursor.execute(
     )"""
 )
 
+
 states = ("California", "Arizona", "Texas", "New york", "Nevada")
 
 for state in states:
     db_cursor.execute("INSERT INTO states (name) VALUES (%s)", [state])
 
-db_cursor.execute("SELECT * FROM states ORDER BY name ASC")
+db_cursor.execute("SELECT * FROM states ORDER BY id")
 
 row_sellected = db_cursor.fetchall()
 
