@@ -21,7 +21,7 @@ db_cursor.execute(
     )"""
 )
 
-states = ("Arizona", "Califonia", "Neveda", "New york", "Texas")
+states = ("California", "Arizona", "Texas", "New york", "Nevada")
 
 for state in states:
     db_cursor.execute("INSERT INTO states (name) VALUES (%s)", [state])
