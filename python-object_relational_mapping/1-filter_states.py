@@ -9,29 +9,31 @@ db_connect = DB.connect(
     passwd=sys.argv[2],
     db=sys.argv[3])
 
-db_cursor = db_connect.cursor()
 
-db_cursor.execute("CREATE DATABASE IF NOT EXISTS hbtn_0e_0_usa;")
-db_cursor.execute("USE hbtn_0e_0_usa;")
-db_cursor.execute(
-    """CREATE TABLE IF NOT EXISTS states(
-        id INT NOT NULL AUTO_INCREMENT,
-        name VARCHAR(256) NOT NULL,
-        PRIMARY KEY (id)
-    )"""
-)
+if __name__ == '__main__':
+    db_cursor = db_connect.cursor()
 
-states = ("California", "Arizona", "Texas", "New york", "Nevada")
+    db_cursor.execute("CREATE DATABASE IF NOT EXISTS hbtn_0e_0_usa;")
+    db_cursor.execute("USE hbtn_0e_0_usa;")
+    db_cursor.execute(
+        """CREATE TABLE IF NOT EXISTS states(
+            id INT NOT NULL AUTO_INCREMENT,
+            name VARCHAR(256) NOT NULL,
+            PRIMARY KEY (id)
+        )"""
+    )
 
-for state in states:
-    db_cursor.execute("INSERT INTO states (name) VALUES (%s)", [state])
+    states = ("California", "Arizona", "Texas", "New york", "Nevada")
 
-db_cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+    for state in states:
+        db_cursor.execute("INSERT INTO states (name) VALUES (%s)", [state])
 
-row_sellected = db_cursor.fetchall()
+    db_cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
 
-for row in row_sellected:
-    print(row)
+    row_sellected = db_cursor.fetchall()
 
-db_connect.commit()
-db_cursor.close()
+    for row in row_sellected:
+        print(row)
+
+    db_connect.commit()
+    db_cursor.close()
