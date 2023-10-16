@@ -28,5 +28,10 @@ for state in states:
 
 db_cursor.execute("SELECT * FROM states ORDER BY name ASC")
 
+row_sellected = db_cursor.fetchall()
+
+for row in row_sellected:
+    print(row)
+
 db_connect.commit()
 db_cursor.close()
