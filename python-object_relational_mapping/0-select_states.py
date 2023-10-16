@@ -1,8 +1,13 @@
 import MySQLdb as DB
-# from flask_sqlalchemy import SQLAlchemy
+import sys
 
-db_connect = DB.connect(host='localhost', port=3306,
-                        user='root', passwd='mummysdaycjflute', db='cj')
+
+db_connect = DB.connect(
+    host='localhost',
+    port=3306,
+    user=sys.argv[1],
+    passwd=sys.argv[2],
+    db=sys.argv[3])
 
 db_cursor = db_connect.cursor()
 
@@ -23,5 +28,3 @@ for state in states:
 
 db_connect.commit()
 db_cursor.close()
-
-# db_cursor.execute("INSERT INTO states ()")
