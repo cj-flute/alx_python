@@ -26,5 +26,12 @@ states = ("California", "Arizona", "Texas", "New york", "Nevada")
 for state in states:
     db_cursor.execute("INSERT INTO states (name) VALUES (%s)", [state])
 
+db_cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+
+row_sellected = db_cursor.fetchall()
+
+for row in row_sellected:
+    print(row)
+
 db_connect.commit()
 db_cursor.close()
