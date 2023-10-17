@@ -23,10 +23,8 @@ if __name__ == '__main__':
         )"""
     )
 
-    states = ("California", "Arizona", "Texas", "New york", "Nevada")
-
-    for state in states:
-        db_cursor.execute("INSERT INTO states (name) VALUES (%s)", [state])
+    db_cursor.execute(
+        "INSERT INTO states (name) VALUES ('California'), ('Arizona'), ('Texas'), ('New York'), ('Nevada')")
 
     db_cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
 
