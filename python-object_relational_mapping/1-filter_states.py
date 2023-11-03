@@ -13,8 +13,6 @@ db_connect = DB.connect(
 if __name__ == '__main__':
     db_cursor = db_connect.cursor()
 
-    # db_cursor.execute("CREATE DATABASE IF NOT EXISTS hbtn_0e_0_usa;")
-    # db_cursor.execute("USE hbtn_0e_0_usa;")
     db_cursor.execute(
         """CREATE TABLE IF NOT EXISTS states(
             id INT NOT NULL AUTO_INCREMENT,
