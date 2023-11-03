@@ -17,9 +17,10 @@ db_connect = DB.connect(
 if __name__ == '__main__':
     db_cursor = db_connect.cursor()
 
-    sql_query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
+    sql_query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(
+        state_name)
 
-    db_cursor.execute(sql_query, (state_name,))
+    db_cursor.execute(sql_query)
 
     row_sellected = db_cursor.fetchall()
 
