@@ -1,35 +1,24 @@
-import MySQLdb as DB
 import sys
+import MySQLdb
 
+if __name__ == "__main__":
+    mysql_username = sys.argv[1]
+    mysql_password = sys.argv[2]
+    database_name = sys.argv[3]
 
-db_connect = DB.connect(
-    host='localhost',
-    port=3306,
-    user=sys.argv[1],
-    passwd=sys.argv[2],
-    db=sys.argv[3])
+    db = MySQLdb.connect(host="localhost", port=3306,
+                         user=mysql_username, passwd=mysql_password, db=database_name)
 
+    cur = db.cursor()
 
-if __name__ == '__main__':
-    db_cursor = db_connect.cursor()
+    sql_query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
 
-    db_cursor.execute(
-        """CREATE TABLE IF NOT EXISTS states(
-            id INT NOT NULL AUTO_INCREMENT,
-            name VARCHAR(256) NOT NULL,
-            PRIMARY KEY (id)
-        )"""
-    )
+    cur.execute(sql_query)
 
-    db_cursor.execute(
-        "INSERT INTO states (name) VALUES ('California'), ('Arizona'), ('Texas'), ('New York'), ('Nevada')")
+    results = cur.fetchall()
 
-    db_cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
-
-    row_sellected = db_cursor.fetchall()
-
-    for row in row_sellected:
+    for row in results:
         print(row)
 
-    db_connect.commit()
-    db_cursor.close()
+    cur.close()
+    db.close()
