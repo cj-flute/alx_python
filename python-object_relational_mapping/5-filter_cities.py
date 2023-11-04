@@ -23,8 +23,8 @@ if __name__ == '__main__':
 
     row_sellected = db_cursor.fetchall()
 
-    for row in row_sellected:
-        print(row)
+    city_name = ', '.join([row[0] for row in row_sellected])
+    print(city_name)
 
     db_connect.commit()
     db_cursor.close()
