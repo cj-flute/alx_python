@@ -3,21 +3,21 @@
     python3 -c 'print(__import__("my_module").__doc__)'
 
 """
-
 import requests
 import sys
 
 
 def get_employee(id):
+    userURL = f'https://jsonplaceholder.typicode.com/users/{id}'
+    todoURL = f'https://jsonplaceholder.typicode.com/users/1/todos'
+
     # get empoyee data
-    user_response = requests.get(
-        f'https://jsonplaceholder.typicode.com/users/{id}')
+    user_response = requests.get(userURL)
     user_data = user_response.json()
     EMPLOYEE_NAME = user_data['name']
 
     # get todo list for the employee
-    todos_response = requests.get(
-        f'https://jsonplaceholder.typicode.com/users/1/todos')
+    todos_response = requests.get(todoURL)
     todos_data = todos_response.json()
 
     done_tasks = [task['title']
