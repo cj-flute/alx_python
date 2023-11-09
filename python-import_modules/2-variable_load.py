@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-from variable_load_2 import var
+from variable_load_2 import a
 
 
 def main():
-    print(var())
+    print(a)
     pass
 
 
