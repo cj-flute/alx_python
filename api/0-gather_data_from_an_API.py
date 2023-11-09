@@ -9,7 +9,7 @@ import sys
 
 def get_employee(id):
     userURL = f'https://jsonplaceholder.typicode.com/users/{id}'
-    todoURL = f'https://jsonplaceholder.typicode.com/users/1/todos'
+    todoURL = f'https://jsonplaceholder.typicode.com/users/{id}/todos'
 
     # get empoyee data
     user_response = requests.get(userURL)
