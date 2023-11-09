@@ -1,18 +1,15 @@
 #!/usr/bin/python3
-def raise_exception_msg():
-    try:
-        print(value)
-    except NameError:
-        value = input()
-        print(value)
-    pass
+def raise_exception_msg(message=""):
+    class CustomException(Exception):
+        def __init__(self, message):
+            self.message = message
+            super().__init__(self.message)
 
-
-def main():
-    raise_exception_msg()
-    pass
+    raise CustomException(message)
 
 
 if __name__ == "__main__":
-    main()
-    pass
+    try:
+        raise_exception_msg("C is fun")
+    except NameError as ne:
+        print(ne)
