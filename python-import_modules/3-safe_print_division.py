@@ -19,8 +19,6 @@ def main():
         print("{:d} / {:d} = {}".format(a, b, result))
         pass
 
-    pass
-
 
 if __name__ == "__main__":
     main()
